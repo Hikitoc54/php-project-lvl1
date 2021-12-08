@@ -2,13 +2,16 @@
     "name": "hexlet/code",
     "description": "hexlet php-package",
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         },
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/Cli.php",
+            "src/Even.php"]
     },
 
     "require": {

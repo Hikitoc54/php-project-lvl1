@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function cli\line;
+use function cli\prompt;
+use function Brain\Games\Even\isEven;
+use function Brain\Games\Even\evenGame;
+
+use const Brain\Games\Even\MAX_ROUNDS_COUNT;
+
+evenGame();
