@@ -8,8 +8,7 @@ use function cli\prompt;
 const MAX_ROUNDS_COUNT = 3;
 function isEven($number) :string
 {
-    if ($number%2===0)
-    {
+    if ($number%2===0) {
         return "yes";
     } else {
         return "no";
@@ -33,7 +32,7 @@ function evenGame()
             echo "Correct!\n";
             $result = $i;
         } else {
-            echo "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n";
+            echo "'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.\n";
             break;
         }
     }
