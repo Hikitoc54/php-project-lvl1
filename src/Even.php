@@ -6,9 +6,9 @@ use function cli\line;
 use function cli\prompt;
 
 const MAX_ROUNDS_COUNT = 3;
-function isEven($number) :string
+function isEven($number): string
 {
-    if ($number%2===0) {
+    if ($number % 2 === 0) {
         return "yes";
     } else {
         return "no";
