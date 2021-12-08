@@ -5,5 +5,5 @@
 ### Запустить игру Brain-Even
 > ```make brain-even```
 
-<a target="_blank" href="https://asciinema.org/a/3MUMM0yHCXYxNjZ0EyK5C0K8e">Demo Brain-Even<a>
+<a target="_blank" href="https://asciinema.org/a/PGELz8mjIjpKaAjmlsQE7xLRr">Demo Brain-Even<a>
 <br />
