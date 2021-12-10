@@ -11,7 +11,10 @@
         },
         "files": [
             "src/Cli.php",
-            "src/Even.php"]
+            "src/Engine.php",
+            "src/Games/Even.php"
+
+        ]
     },
 
     "require": {

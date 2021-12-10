@@ -4,11 +4,9 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Games\Even\isEven;
-use function Brain\Games\Even\evenGame;
 
-use const Brain\Games\Even\MAX_ROUNDS_COUNT;
+use  Brain\Games\Even;
+use Brain\Games\Engine;
 
-evenGame();
+
+Even\game();
