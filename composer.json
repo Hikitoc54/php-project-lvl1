@@ -3,7 +3,8 @@
     "description": "hexlet php-package",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "autoload": {
         "psr-4": {
@@ -12,7 +13,8 @@
         "files": [
             "src/Cli.php",
             "src/Engine.php",
-            "src/Games/Even.php"
+            "src/Games/Even.php",
+            "src/Games/Calc.php"
 
         ]
     },

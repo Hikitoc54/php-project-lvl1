@@ -2,7 +2,6 @@
 
 namespace Brain\Games\Even;
 
-
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\welcome;
@@ -21,9 +20,9 @@ function game(): void
         $correctAnswer = isEven($randNum);
         $engine = engine($question, $correctAnswer);
         if ($engine) {
-            $result = "Congratulations, {$name}!";
+            $result = "Congratulations, $name!";
         } else {
-            $result = "Let's try again, {$name}!";
+            $result = "Let's try again, $name!";
             break;
         }
     }
