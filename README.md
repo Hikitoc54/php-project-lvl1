@@ -18,3 +18,9 @@
   
 <a target="_blank" href="https://asciinema.org/a/lpiTyQWtdwr3IYwrd0Ihx9eRc">Demo Brain-Gcd<a>
 <br />
+
+    ### Запустить игру Brain-Progression
+> ```make brain-progression```
+  
+<a target="_blank" href="https://asciinema.org/a/P6vDuPjzotSeYXmMbQYiKq5qw">Demo Brain-Progression<a>
+<br />
