@@ -7,3 +7,8 @@
 
 <a target="_blank" href="https://asciinema.org/a/PGELz8mjIjpKaAjmlsQE7xLRr">Demo Brain-Even<a>
 <br />
+### Запустить игру Brain-Calc
+> ```make brain-calc```
+  
+<a target="_blank" href="https://asciinema.org/a/hTdTr9hL70xJFvGjeEtRSpH49">Demo Brain-Calc<a>
+<br />
