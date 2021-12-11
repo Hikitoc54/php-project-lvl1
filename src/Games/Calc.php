@@ -19,7 +19,7 @@ function game(): void
         $randNum1 = rand(0, 25);
         $randNum2 = rand(0, 25);
         $operation = substr(str_shuffle('+-*'), 0, 1);
-        $question = (string) $randNum1.$operation.$randNum2;
+        $question = (string) $randNum1 . $operation . $randNum2;
         $correctAnswer = calculate($randNum1, $randNum2, $operation);
         $engine = engine($question, $correctAnswer);
         if ($engine) {
@@ -36,14 +36,13 @@ function calculate($randNum1, $randNum2, $operation)
 {
     switch ($operation) {
         case "+":
-            return ($randNum1+$randNum2);
+            return ($randNum1 + $randNum2);
             break;
         case "-":
-            return ($randNum1-$randNum2);
+            return ($randNum1 - $randNum2);
             break;
         case "*":
-            return ($randNum1*$randNum2);
+            return ($randNum1 * $randNum2);
             break;
     }
-
 }

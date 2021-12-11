@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use  Brain\Games\Gcd;
+use Brain\Games\Engine;
+
+Gcd\game();
