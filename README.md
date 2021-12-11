@@ -12,3 +12,9 @@
   
 <a target="_blank" href="https://asciinema.org/a/hTdTr9hL70xJFvGjeEtRSpH49">Demo Brain-Calc<a>
 <br />
+
+  ### Запустить игру Brain-Gcd
+> ```make brain-gcd```
+  
+<a target="_blank" href="https://asciinema.org/a/lpiTyQWtdwr3IYwrd0Ihx9eRc">Demo Brain-Gcd<a>
+<br />
