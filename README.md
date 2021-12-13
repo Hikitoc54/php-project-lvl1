@@ -24,3 +24,9 @@
   
 <a target="_blank" href="https://asciinema.org/a/P6vDuPjzotSeYXmMbQYiKq5qw">Demo Brain-Progression<a>
 <br />
+
+### Запустить игру Brain-Prime
+> ```make brain-prime```
+  
+<a target="_blank" href="https://asciinema.org/a/IbFhhdfBHbtp76mldvikKVYiH">Demo Brain-Prime<a>
+<br />
