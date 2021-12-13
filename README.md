@@ -13,13 +13,13 @@
 <a target="_blank" href="https://asciinema.org/a/hTdTr9hL70xJFvGjeEtRSpH49">Demo Brain-Calc<a>
 <br />
 
-  ### Запустить игру Brain-Gcd
+### Запустить игру Brain-Gcd
 > ```make brain-gcd```
   
 <a target="_blank" href="https://asciinema.org/a/lpiTyQWtdwr3IYwrd0Ihx9eRc">Demo Brain-Gcd<a>
 <br />
 
-    ### Запустить игру Brain-Progression
+### Запустить игру Brain-Progression
 > ```make brain-progression```
   
 <a target="_blank" href="https://asciinema.org/a/P6vDuPjzotSeYXmMbQYiKq5qw">Demo Brain-Progression<a>
