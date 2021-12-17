@@ -4,21 +4,21 @@ namespace Brain\Games\Even;
 
 use function cli\line;
 use function cli\prompt;
-use function Brain\Games\Engine\welcome;
-use function Brain\Games\Engine\engine;
+use function Brain\Engine\greet;
+use function Brain\Engine\runEngine;
 
-use const Brain\Games\Engine\ROUNDS_COUNT;
+use const Brain\Engine\ROUNDS_COUNT;
 
-function game(): void
+function play(): void
 {
     $result = '';
-    $name = welcome();
+    $name = greet();
     line('Answer "yes" if the number is even, otherwise answer "no".');
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randNum = rand(0, 100);
         $question = (string) $randNum;
         $correctAnswer = isEven($randNum);
-        $engine = engine($question, $correctAnswer);
+        $engine = runEngine($question, $correctAnswer);
         if ($engine) {
             $result = "Congratulations, $name!";
         } else {

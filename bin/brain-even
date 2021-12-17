@@ -6,7 +6,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 
 use  Brain\Games\Even;
-use Brain\Games\Engine;
 
 
-Even\game();
+Even\play();
