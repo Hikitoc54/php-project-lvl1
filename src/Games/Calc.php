@@ -19,7 +19,7 @@ function play(): void
         $randNum1 = rand(0, 25);
         $randNum2 = rand(0, 25);
         $operation = substr(str_shuffle('+-*'), 0, 1);
-        $question = (string) $randNum1 . $operation . $randNum2;
+        $question = (string) "{$randNum1} {$operation} {$randNum2}";
         $correctAnswer = calculate($randNum1, $randNum2, $operation);
         $engine = runEngine($question, $correctAnswer);
         if ($engine) {
