@@ -18,7 +18,7 @@ function play(): void
         $start = rand(1, 10);
         $oldProg = progress($start);
         $size = count(progress($start));
-        $changedKey = rand(0, ($size - 2));
+        $changedKey = rand(0, ($size - 1));
         $newProg = $oldProg;
         $newProg[$changedKey] = '..';
         $question = implode(" ", $newProg);
