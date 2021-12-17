@@ -39,7 +39,7 @@ function progress(int $start): array
     $progression = [];
     $progression[0] = $start;
     $lengh = rand(6, 10);
-    for ($i = 1; $i < ($lengh - 1); $i++) {
+    for ($i = 1; $i < $lengh; $i++) {
         $progression[] = $progression[$i - 1] + $start;
     }
     return $progression;

@@ -18,7 +18,7 @@ function play(): void
         $randNum1 = rand(0, 100);
         $randNum2 = rand(0, 100);
         $question = "$randNum1 $randNum2";
-        $correctAnswer =(string) getGcd($randNum1, $randNum2);
+        $correctAnswer = (string) getGcd($randNum1, $randNum2);
         $engine = runEngine($question, $correctAnswer);
         if ($engine) {
             $result = "Congratulations, $name!";
