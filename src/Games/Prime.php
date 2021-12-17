@@ -29,7 +29,7 @@ function play(): void
     line($result);
 }
 
-function isPrime($randNum)
+function isPrime(int $randNum)
 {
     for ($i = 2; $i < $randNum; $i++) {
         if ($randNum % $i == 0) {

@@ -17,8 +17,8 @@ function play(): void
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randNum1 = rand(0, 100);
         $randNum2 = rand(0, 100);
-        $question = (string)"$randNum1 $randNum2";
-        $correctAnswer = gcd($randNum1, $randNum2);
+        $question = "$randNum1 $randNum2";
+        $correctAnswer =(string) getGcd($randNum1, $randNum2);
         $engine = runEngine($question, $correctAnswer);
         if ($engine) {
             $result = "Congratulations, $name!";
@@ -30,7 +30,7 @@ function play(): void
     line($result);
 }
 
-function divide($number): array
+function divide(int $number): array
 {
     $divisors = [];
     for ($i = 1; $i <= $number; $i++) {
@@ -41,7 +41,7 @@ function divide($number): array
     return $divisors;
 }
 
-function gcd($randNum1, $randNum2): int
+function getGcd(int $randNum1, int $randNum2): int
 {
     return max(array_intersect((divide($randNum1)), (divide($randNum2))));
 }

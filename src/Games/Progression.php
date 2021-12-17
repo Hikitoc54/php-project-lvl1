@@ -34,7 +34,7 @@ function play(): void
     line($result);
 }
 
-function progress($start): array
+function progress(int $start): array
 {
     $progression = [];
     $progression[0] = $start;
