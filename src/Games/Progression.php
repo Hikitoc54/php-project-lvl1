@@ -17,7 +17,7 @@ function play(): void
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $start = rand(1, 10);
         $oldProg = progress($start);
-        $size = count(progress($start));
+        $size = count($oldProg);
         $changedKey = rand(0, ($size - 1));
         $newProg = $oldProg;
         $newProg[$changedKey] = '..';
