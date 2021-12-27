@@ -4,8 +4,6 @@ namespace Brain\Games\Calc;
 
 use function Brain\Engine\runEngine;
 
-use const Brain\Engine\ROUNDS_COUNT;
-
 const DESCRIPTION = 'What is the result of the expression?';
 
 const OPERATIONS = ['+', '-', '*'];
