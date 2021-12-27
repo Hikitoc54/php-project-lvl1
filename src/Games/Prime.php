@@ -19,7 +19,7 @@ function isPrime(int $randNum): bool
 function run()
 {
     $generateRoundData = function () {
-        $randNum = rand(1, 100);
+        $randNum = (int) rand(1, 100);
         $question = (string) $randNum;
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
         return [
