@@ -19,8 +19,8 @@ function isPrime(int $randNum): bool
 function run()
 {
     $generateRoundData = function () {
-        $randNum = (int) rand(1, 100);
-        $question = (string) $randNum;
+        $randNum = rand(1, 100);
+        $question = $randNum;
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
         return [
             'question' => "$question",
