@@ -2,36 +2,25 @@
 
 namespace Brain\Games\Even;
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Engine\greet;
 use function Brain\Engine\runEngine;
 
-use const Brain\Engine\ROUNDS_COUNT;
+const DESCRIPTION = 'Answer "yes" if given number is even, otherwise answer "no".';
 
-function play(): void
+function isEven(int $num)
 {
-    $result = '';
-    $name = greet();
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $randNum = rand(0, 100);
-        $question = (string) $randNum;
-        $correctAnswer = isEven($randNum);
-        $engine = runEngine($question, $correctAnswer);
-        if ($engine) {
-            $result = "Congratulations, $name!";
-        } else {
-            $result = "Let's try again, $name!";
-            break;
-        }
-    }
-    line($result);
+    return $num % 2 == 0;
 }
-function isEven(int $randNum): string
+
+function run()
 {
-    if ($randNum % 2 === 0) {
-        return 'yes';
-    }
-    return 'no';
+    $generateRoundData = function () {
+        $question = rand(1, 100);
+        $correctAnswer = isEven($question) ? 'yes' : 'no';
+        return [
+            'question' => $question,
+            'answer' => $correctAnswer
+        ];
+    };
+
+    runEngine($generateRoundData, DESCRIPTION);
 }

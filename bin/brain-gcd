@@ -7,4 +7,4 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use  Brain\Games\Gcd;
 
 
-Gcd\play();
+Gcd\run();

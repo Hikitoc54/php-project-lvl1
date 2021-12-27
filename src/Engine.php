@@ -5,25 +5,39 @@ namespace Brain\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const ROUNDS_COUNT = 3;
+const MAX_ROUNDS_COUNT = 3;
 
-function greet(): string
+function runEngine(callable $generateRoundData, string $description)
 {
     line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    return $name;
-}
 
-function runEngine(string $question, string $correctAnswer): bool
-{
-    line("Question: {$question}");
-    $answer = prompt('Your answer');
-    if ($answer === $correctAnswer) {
+    $userName = prompt('May I have your name?');
+    line("Hello, ${userName}!", $userName);
+
+    line($description);
+
+
+    $runRound = function (int $i) use ($generateRoundData, $userName, &$runRound) {
+        if ($i >= MAX_ROUNDS_COUNT) {
+            line("Congratulations, ${userName}!");
+            return;
+        }
+
+        ['question' => $question, 'answer' => $correctAnswer] = $generateRoundData();
+
+        line("Question: ${question}");
+
+        $answer = prompt('Your answer');
+
+        if ($correctAnswer !== $answer) {
+            line("'${answer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.");
+            return;
+        }
+
         line('Correct!');
-        return true;
-    } else {
-        line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-        return false;
-    }
+
+        $runRound($i + 1);
+    };
+
+    $runRound(0);
 }
