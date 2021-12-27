@@ -31,6 +31,7 @@ function runEngine(callable $generateRoundData, string $description)
 
         if ($correctAnswer !== $answer) {
             line("'${answer}' is the wrong answer ;(. The correct answer was '${correctAnswer}'.");
+            line("Let's try again, ${userName}!");
             return;
         }
 
