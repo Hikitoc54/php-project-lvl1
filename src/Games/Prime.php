@@ -8,6 +8,9 @@ const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no
 
 function isPrime(int $randNum): bool
 {
+    if ($randNum <= 1) {
+        return false;
+    }
     for ($i = 2; $i < $randNum; $i++) {
         if ($randNum % $i == 0) {
             return false;

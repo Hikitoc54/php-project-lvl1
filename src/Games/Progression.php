@@ -6,13 +6,12 @@ use function Brain\Engine\runEngine;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function generateProgression(int $start): array
+function generateProgression(int $start, int $length, int $step): array
 {
     $progression = [];
     $progression[0] = $start;
-    $lengh = rand(6, 10);
-    for ($i = 1; $i < $lengh; $i++) {
-        $progression[] = $progression[$i - 1] + $start;
+    for ($i = 1; $i < $length; $i++) {
+        $progression[] = $progression[$i - 1] + $step;
     }
     return $progression;
 }
@@ -21,14 +20,16 @@ function run()
 {
     $generateRoundData = function () {
         $start = rand(1, 10);
-        $oldProg = generateProgression($start);
-        $size = count($oldProg);
+        $step = $start;
+        $length = rand(6, 10);
+        $oldProgression = generateProgression($start, $length, $step);
+        $size = count($oldProgression);
         $changedKey = rand(0, ($size - 1));
-        $newProg = $oldProg;
-        $newProg[$changedKey] = '..';
-        $correctAnswer = $oldProg[$changedKey];
+        $newProgression = $oldProgression;
+        $newProgression[$changedKey] = '..';
+        $correctAnswer = $oldProgression[$changedKey];
         return [
-            'question' => implode(' ', $newProg),
+            'question' => implode(' ', $newProgression),
             'answer' => (string) $correctAnswer
         ];
     };

@@ -16,13 +16,7 @@ function runEngine(callable $generateRoundData, string $description)
 
     line($description);
 
-
-    $runRound = function (int $i) use ($generateRoundData, $userName, &$runRound) {
-        if ($i >= MAX_ROUNDS_COUNT) {
-            line("Congratulations, ${userName}!");
-            return;
-        }
-
+    for ($i = 0; $i < MAX_ROUNDS_COUNT; $i++) {
         ['question' => $question, 'answer' => $correctAnswer] = $generateRoundData();
 
         line("Question: ${question}");
@@ -36,9 +30,7 @@ function runEngine(callable $generateRoundData, string $description)
         }
 
         line('Correct!');
-
-        $runRound($i + 1);
-    };
-
-    $runRound(0);
+    }
+    line("Congratulations, ${userName}!");
+    return;
 }

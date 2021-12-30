@@ -6,7 +6,7 @@ use function Brain\Engine\runEngine;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function divide(int $number): array
+function getDivisors(int $number): array
 {
     $divisors = [];
     for ($i = 1; $i <= $number; $i++) {
@@ -19,7 +19,7 @@ function divide(int $number): array
 
 function getGcd(int $randNum1, int $randNum2): int
 {
-    return max(array_intersect((divide($randNum1)), (divide($randNum2))));
+    return max(array_intersect((getDivisors($randNum1)), (getDivisors($randNum2))));
 }
 
 function run()
