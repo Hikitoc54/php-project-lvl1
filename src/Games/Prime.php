@@ -23,7 +23,7 @@ function run()
 {
     $generateRoundData = function () {
         $randNum = rand(1, 100);
-        $question = (string) $randNum;
+        $question = $randNum;
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
         return [
             'question' => "$question",
