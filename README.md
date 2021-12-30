@@ -7,23 +7,28 @@
 
 <a target="_blank" href="https://asciinema.org/a/EXoovnYgfUk9gYtPvrtDq0ouq">Demo Brain-Even<a>
 <br />
+[![asciicast](https://asciinema.org/a/EXoovnYgfUk9gYtPvrtDq0ouq.svg)](https://asciinema.org/a/EXoovnYgfUk9gYtPvrtDq0ouq)
+  
 ### Запустить игру Brain-Calc
 > ```make brain-calc```
   
 <a target="_blank" href="https://asciinema.org/a/JsWUKNM2eIwEPue1olZJvb8rG">Demo Brain-Calc<a>
 <br />
+[![asciicast](https://asciinema.org/a/JsWUKNM2eIwEPue1olZJvb8rG.svg)](https://asciinema.org/a/JsWUKNM2eIwEPue1olZJvb8rG)
 
 ### Запустить игру Brain-Gcd
 > ```make brain-gcd```
   
 <a target="_blank" href="https://asciinema.org/a/r5s5XdDKxO209b0PuvuIOGrk8">Demo Brain-Gcd<a>
 <br />
+[![asciicast](https://asciinema.org/a/r5s5XdDKxO209b0PuvuIOGrk8.svg)](https://asciinema.org/a/r5s5XdDKxO209b0PuvuIOGrk8)
 
 ### Запустить игру Brain-Progression
 > ```make brain-progression```
   
 <a target="_blank" href="https://asciinema.org/a/gNqaqHv4C239YmveA6e3vjBCz">Demo Brain-Progression<a>
 <br />
+[![asciicast](https://asciinema.org/a/gNqaqHv4C239YmveA6e3vjBCz.svg)](https://asciinema.org/a/gNqaqHv4C239YmveA6e3vjBCz)
 
 ### Запустить игру Brain-Prime
 > ```make brain-prime```
