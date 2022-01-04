@@ -10,7 +10,7 @@ function getDivisors(int $number): array
 {
     $divisors = [];
     for ($i = 1; $i <= $number; $i++) {
-        if ($number % $i == 0) {
+        if ($number % $i === 0) {
             $divisors[] = $i;
         }
     }

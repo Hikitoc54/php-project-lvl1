@@ -32,5 +32,4 @@ function runEngine(callable $generateRoundData, string $description)
         line('Correct!');
     }
     line("Congratulations, ${userName}!");
-    return;
 }

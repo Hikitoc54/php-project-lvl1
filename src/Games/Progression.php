@@ -9,9 +9,8 @@ const DESCRIPTION = 'What number is missing in the progression?';
 function generateProgression(int $start, int $length, int $step): array
 {
     $progression = [];
-    $progression[0] = $start;
-    for ($i = 1; $i < $length; $i++) {
-        $progression[] = $progression[$i - 1] + $step;
+    for ($i = 0; $i < $length; $i++) {
+        $progression[] = $start + $step * $i;
     }
     return $progression;
 }
@@ -20,14 +19,13 @@ function run()
 {
     $generateRoundData = function () {
         $start = rand(1, 10);
-        $step = $start;
+        $step = rand(1, 10);
         $length = rand(6, 10);
-        $oldProgression = generateProgression($start, $length, $step);
-        $size = count($oldProgression);
-        $changedKey = rand(0, ($size - 1));
-        $newProgression = $oldProgression;
-        $newProgression[$changedKey] = '..';
-        $correctAnswer = $oldProgression[$changedKey];
+        $Progression = generateProgression($start, $length, $step);
+        $indexForChange = rand(0, ($length - 1));
+        $newProgression = $Progression;
+        $newProgression[$indexForChange] = '..';
+        $correctAnswer = $Progression[$indexForChange];
         return [
             'question' => implode(' ', $newProgression),
             'answer' => (string) $correctAnswer
