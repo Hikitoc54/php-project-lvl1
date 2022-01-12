@@ -23,10 +23,9 @@ function run()
 {
     $generateRoundData = function () {
         $randNum = rand(1, 100);
-        $question = $randNum;
-        $correctAnswer = isPrime($question) ? 'yes' : 'no';
+        $correctAnswer = isPrime($randNum) ? 'yes' : 'no';
         return [
-            'question' => "$question",
+            'question' => "$randNum",
             'answer' => $correctAnswer
         ];
     };

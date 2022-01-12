@@ -21,12 +21,12 @@ function run()
         $start = rand(1, 10);
         $step = rand(1, 10);
         $length = rand(6, 10);
-        $Progression = generateProgression($start, $length, $step);
+        $progression = generateProgression($start, $length, $step);
         $indexForChange = rand(0, ($length - 1));
-        $correctAnswer = $Progression[$indexForChange];
-        $Progression[$indexForChange] = '..';
+        $correctAnswer = $progression[$indexForChange];
+        $progression[$indexForChange] = '..';
         return [
-            'question' => implode(' ', $Progression),
+            'question' => implode(' ', $progression),
             'answer' => (string) $correctAnswer
         ];
     };

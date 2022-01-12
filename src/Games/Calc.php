@@ -17,6 +17,8 @@ function calculate(int $randNum1, int $randNum2, string $operation)
             return ($randNum1 - $randNum2);
         case "*":
             return ($randNum1 * $randNum2);
+        default:
+            throw new \Exception('Undefined Operation');
     }
 }
 
